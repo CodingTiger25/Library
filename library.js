@@ -13,9 +13,13 @@ function Book(title, author,pages,read)
     }
 }
 
-function addBookToLibrary(){
+function addBookToLibrary(title, author,pages,read){
 
-
+    let book = new Book(title, author,pages,read);
+    myLibrary.push(book);
+    document.getElementById("addBook").style.display="none";
+    alert("Added "  + title)
+    ;
 
 }
 
