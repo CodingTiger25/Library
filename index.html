@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="library.js"></script>
+    <script src="library.js" defer></script>
 </head>
 <body>
     <h1>Odin library</h1>
@@ -12,18 +12,17 @@
 
     
 
-        <button onclick="openForm()"> New book</button>
+        <button id="opnForm"> New book</button>
 
      
             
-    <main>
-        
-    </main>
+    <div id="displayBook">
+
+    </div>
 
 
-
-        <div id="addBook" style = "display:none">
-            <form id="form">
+        <div id="addBook" style = "display:none;">
+            <form id="myForm">
                 <div>            
                     <label>Book Title: </label>
                     <input id="title"> 
@@ -51,7 +50,7 @@
                  document.getElementById('pages').value,
                  document.getElementById('read').value)">Add book</button>
               
-                <button onclick="closeForm()">Close form</button>
+                <button id="clseForm">Close form</button>
                
             </form>
 

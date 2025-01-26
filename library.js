@@ -13,6 +13,7 @@ function Book(title, author,pages,read)
     }
 }
 
+
 function addBookToLibrary(title, author,pages,read){
 
     let book = new Book(title, author,pages,read);
@@ -21,6 +22,57 @@ function addBookToLibrary(title, author,pages,read){
     //document.getElementById("addBook").style.display="none";
     //alert("Added "  + title)
     console.log(myLibrary);
+    document.getElementById("displayBook").innerHTML= myLibrary.map(library => 
+        `
+        <table>
+            <tr>
+                <th>
+                   Title
+                </th>
+            <tr>
+
+            <tr>
+                <td>
+                    ${library.title}
+                </td>
+            </tr>
+            
+            <th>
+                   Author
+                </th>
+            <tr>
+
+            <tr>
+                <td>
+                    ${library.author}
+                </td>
+            </tr>
+
+            <th>
+                   Amount of pages
+                </th>
+            <tr>
+
+            <tr>
+                <td>
+                    ${library.pages}
+                </td>
+            </tr>
+
+            <th>
+                   Read
+                </th>
+            <tr>
+
+            <tr>
+                <td>
+                    ${library.read}
+                </td>
+            </tr>
+
+        </table>
+        `
+    )
     ;
 
 }
@@ -31,37 +83,13 @@ function openForm()
 }
 
 
- //document.getElementById("btnOpen").addEventListener('click', openForm);
-
-
-
-
-function displayBooks()
-{
-    <table style= "width: 100%">
-        <tr>
-            <th>Title</th>
-            <th>
-                Author
-            </th>
-            <th>
-                Pages
-            </th>
-            <th>
-                READ? 
-            </th>
-        </tr>
-
-    </table>
-};
-
-document.querySelector("main").innerHTML = `
-<ol>
-    ${displayBooks()}
-</ol>`;
+ document.getElementById("opnForm").onclick=openForm;
 
 
 function closeForm()
 {
     document.getElementById("addBook").style.display="none";
 }
+
+document.getElementById("clseForm").onclick=closeForm;
+
